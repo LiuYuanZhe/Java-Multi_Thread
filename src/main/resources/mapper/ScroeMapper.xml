@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sdust.ssm.dao.ScoreDao">
+    <insert id="insertScore" parameterType="com.sdust.ssm.entity.Score">
+        INSERT  INTO score (change_type,score)
+        VALUES (#{changeType},#{score})
+    </insert>
+
+    <!--<select id="queryAll" resultType="com.sdust.ssm.entity.Score">-->
+        <!--SELECT * FROM score-->
+    <!--</select>-->
+
+    <!--<select id="queryLimit" resultType="com.sdust.ssm.entity.Score">-->
+        <!--select * from score-->
+        <!--ORDER BY create_time-->
+        <!--DESC LIMIT #{offset},#{limit};-->
+    <!--</select>-->
+</mapper>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sdust.ssm.dao.GagDao">
+    <insert id="insertGag" parameterType="com.sdust.ssm.entity.Gag">
+        INSERT INTO gag (gag_time,user_id)
+        VALUES (#{gagTime},#{user.id})
+    </insert>
+    <select id="findByUserId" resultType="com.sdust.ssm.entity.Gag" parameterType="long">
+        SELECT *
+        FROM gag
+        WHERE user_id = #{id}
+    </select>
+    <select id="findAll" resultType="com.sdust.ssm.entity.Gag">
+        SELECT * FROM gag
+    </select>
+</mapper>

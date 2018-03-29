@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sdust.ssm.dao.UserDao">
+    <insert id="insert" parameterType="com.sdust.ssm.entity.User">
+        insert into `userdemo`(account,country,score,province,sex,`password`)" +
+                " VALUES(#{user.account},#{user.country},#{user.score},#{user.province},#{user.sex},#{user.password})
+    </insert>
+    <select id="findById" resultType="com.sdust.ssm.entity.User" parameterType="int">
+        select * from userdemo where id=#{user.id}
+    </select>
+    <select id="findAllUser" resultType="com.sdust.ssm.entity.User">
+        SELECT * FROM userdemo
+    </select>
+</mapper>
