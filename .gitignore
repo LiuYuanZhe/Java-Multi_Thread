@@ -30,7 +30,6 @@ bin/
 .idea
 *.iml
 catalina.home_IS_UNDEFINED
-/mobanker-safe-parent/**/bin/
 atlassian-ide-plugin.xml
 classes
 logs/
